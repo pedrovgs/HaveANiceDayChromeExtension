@@ -6,5 +6,19 @@
   "repository": "git@github.com:pedrovgs/HaveANiceDayChromeExtension.git",
   "author": "Pedro Vicente Gómez Sánchez",
   "license": "GPL-3.0",
-  "private": false
+  "private": false,
+  "scripts": {
+    "test": "mocha --recursive --require ./test/bootload.js --require babel-register"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "jsverify": "^0.8.3",
+    "mocha": "^4.0.1",
+    "mocha-eslint": "^4.1.0",
+    "prettier": "^1.8.2",
+    "prettier-eslint-cli": "^4.4.0"
+  }
 }
