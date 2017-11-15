@@ -1,1 +1,2 @@
-console.log("HAVE A NICE DAY!");
+require("./manifest.json");
+require("./index.html");
