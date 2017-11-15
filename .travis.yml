@@ -9,3 +9,4 @@ script:
   - yarn eslint src
   - yarn eslint test
   - yarn test
+  - yarn webpack
