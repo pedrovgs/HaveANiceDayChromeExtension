@@ -1,1 +1,3 @@
-console.log("index.js it works!");
+window.onload = function() {
+  console.log("Have a nice day!");
+};
