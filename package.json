@@ -2,13 +2,13 @@
   "name": "HaveANiceDayChromeExtension",
   "version": "0.0.1",
   "description": "Chrome extension to generate smiles thanks to https://github.com/pedrovgs/HaveANiceDay",
-  "main": "index.js",
+  "main": "src/app.js",
   "repository": "git@github.com:pedrovgs/HaveANiceDayChromeExtension.git",
   "author": "Pedro Vicente Gómez Sánchez",
   "license": "GPL-3.0",
   "private": false,
   "scripts": {
-    "start": "node_modules/.bin/webpack src/app.js -o bundle.js && webpack-dev-server",
+    "start": "webpack && webpack-dev-server",
     "test": "mocha --recursive --require ./test/bootload.js --require babel-register"
   },
   "devDependencies": {
