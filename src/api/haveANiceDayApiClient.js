@@ -1,7 +1,8 @@
 import rest from "rest";
 
 //const basePath = "http://localhost:9000/api";
-const basePath = "http://have-a-nice-day-env.eu-west-1.elasticbeanstalk.com/api";
+const basePath =
+  "http://have-a-nice-day-env.eu-west-1.elasticbeanstalk.com/api";
 
 export class Page {
   constructor(number = 1, pageSize = 5) {

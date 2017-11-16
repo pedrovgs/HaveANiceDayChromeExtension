@@ -7,10 +7,9 @@ const serializer = new XMLSerializer(typeof XmlElement);
 window.onload = () => {
   const carousel = initializeCarousel();
   const page = new Page(1, 10);
-  /*getSmiles(page).then(page => {
-    console.log("--------- smiles obtained -------");
-    console.log(JSON.stringify(page));
-  });*/
+  getSmiles(page).then(page => {
+    console.log(`Get smiles result: ${JSON.stringify(page)}`);
+  });
   const smiles = [1, 2, 3, 4, 5, 6, 7];
   showSmiles(carousel, smiles);
 };
@@ -30,7 +29,7 @@ function showSmiles(carousel, smiles) {
 }
 
 function showSmile(carousel, smile) {
-  const title = "alt text";
+  const title = smile.toString();
   const photo = "https://nerdist.com/wp-content/uploads/2017/03/PnM2iU.jpg";
   $(".slick-slider").slick(
     "slickAdd",
