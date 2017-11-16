@@ -20,6 +20,10 @@ If you are using IntelliJ IDEA, WebStorm or any other IDE to run your tests you'
 
 This configuration is the same you can find in the project ``package.json`` configuration.
 
+### Running the extension:
+
+To run this extension you can execute ``yarn webpack`` and import the extension as an "unpacked extension" or run ``yarn start`` and run the extension as a regular web page.
+
 ### Packaging:
 
 This project uses [webpack](https://webpack.js.org) and [babel](https://babeljs.io) in order to pack a simple ``bundle.js`` file, with all the repository code, fully backward compatible with some old JavaScript versions. If you want to pack all this code into a single file you can easily do it by just running:
@@ -27,6 +31,8 @@ This project uses [webpack](https://webpack.js.org) and [babel](https://babeljs.
 ```
 yarn webpack
 ```
+
+This command generates a ``dist`` folder where all the code needed to pack the extension is placed. After executing this command you can export the chrome extension using the chrome development tools.
 
 ### Linter:
 

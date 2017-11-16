@@ -1,5 +1,7 @@
 import "slick-carousel";
 import $ from "jquery";
+import Duration from "duration-js";
+
 import { Page, getSmiles } from "./api/haveANiceDayApiClient";
 
 window.onload = () => {
@@ -16,7 +18,8 @@ function initializeCarousel(carousel) {
       resolve();
     });
     carousel.slick({
-      draggable: false,
+      autoplay: true,
+      autoplaySpeed: 1 * Duration.hour,
       arrows: false
     });
   });

@@ -30,6 +30,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
+    "duration-js": "^4.0.0",
     "jquery": "^3.2.1",
     "rest": "^2.0.0",
     "slick-carousel": "^1.8.1"
