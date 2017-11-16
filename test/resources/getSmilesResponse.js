@@ -16,6 +16,11 @@ export const getSmilesResponse = {
   pageSize: 25
 };
 
+export const getSmilesEmptyPageResponse = {
+  page: 1,
+  pageSize: 25
+};
+
 export const getRandomSmileResponse = {
   id: 2,
   title: "Title"

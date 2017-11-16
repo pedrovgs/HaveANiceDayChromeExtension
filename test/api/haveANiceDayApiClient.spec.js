@@ -1,7 +1,7 @@
 import { HaveANiceDayApiClient } from "../../src/api/haveANiceDayApiClient";
 import { GetSmileError, Page, Smile } from "../../src/domain/model";
 import {
-  getRandomSmileResponse,
+  getRandomSmileResponse, getSmilesEmptyPageResponse,
   getSmilesResponse
 } from "../resources/getSmilesResponse";
 import { Maybe } from "monet";
@@ -32,6 +32,14 @@ describe("HaveANiceDayApiClient", () => {
           Maybe.Some("http://photos.com/random1.png")
         )
       );
+    });
+  });
+
+  it("should return an empty list of smiles if there are no smiles", () => {
+    givenGetSmilesEndpointReturns(anyPage, 200, getSmilesEmptyPageResponse);
+
+    return apiClient.getSmiles(anyPage).then(response => {
+      expect(response.right().length).to.equal(0);
     });
   });
 

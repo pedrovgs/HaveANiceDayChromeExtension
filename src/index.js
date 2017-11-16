@@ -10,9 +10,12 @@ window.onload = () => {
   const carouselPromise = initializeCarousel(carousel);
   const smilesPromise = loadSmiles();
   Promise.all([carouselPromise, smilesPromise]).then(results => {
-    //TODO: Check left or right here bro.
     const getSmilesResult = results[1];
-    showSmiles(carousel, getSmilesResult);
+    if (getSmilesResult.isRight()) {
+      showSmiles(carousel, getSmilesResult.right());
+    } else {
+      showErrorCase();
+    }
   });
 };
 
@@ -34,9 +37,15 @@ function loadSmiles() {
 }
 
 function showSmiles(carousel, smiles) {
+  resetCarousel(carousel);
   smiles.forEach(smile => {
     showSmile(carousel, smile);
   });
+}
+
+function resetCarousel(carousel) {
+  //TODO: Improve this
+  carousel.slick("slickRemove", 0);
 }
 
 function showSmile(carousel, smile) {
@@ -46,4 +55,8 @@ function showSmile(carousel, smile) {
     "slickAdd",
     `<img class='smile' src='${photo}' alt='${title}'/>`
   );
+}
+
+function showErrorCase() {
+  //TODO: Implement this method with the corresponding UI.
 }

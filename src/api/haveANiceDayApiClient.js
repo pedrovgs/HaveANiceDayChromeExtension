@@ -32,7 +32,11 @@ export class HaveANiceDayApiClient {
 function toSmiles(response) {
   const json = JSON.parse(response.entity);
   const jsonSmiles = json["data"];
-  return jsonSmiles.map(jsonSmile => toSmile(jsonSmile));
+  if (jsonSmiles) {
+    return jsonSmiles.map(jsonSmile => toSmile(jsonSmile));
+  } else {
+    return [];
+  }
 }
 
 function toSmile(jsonSmile) {
