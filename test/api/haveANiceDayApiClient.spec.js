@@ -1,6 +1,9 @@
 import { HaveANiceDayApiClient } from "../../src/api/haveANiceDayApiClient";
 import { GetSmileError, Page, Smile } from "../../src/domain/model";
-import {getRandomSmileResponse, getSmilesResponse} from "../resources/getSmilesResponse";
+import {
+  getRandomSmileResponse,
+  getSmilesResponse
+} from "../resources/getSmilesResponse";
 import { Maybe } from "monet";
 
 const apiClient = new HaveANiceDayApiClient();
@@ -52,7 +55,9 @@ describe("HaveANiceDayApiClient", () => {
     givenGetRandomSmileEndpointReturns(200, getRandomSmileResponse);
 
     return apiClient.getRandomSmile().then(response => {
-      expect(response.right()).to.deep.equal(new Smile(2, "Title", Maybe.None(), Maybe.None()));
+      expect(response.right()).to.deep.equal(
+        new Smile(2, "Title", Maybe.None(), Maybe.None())
+      );
     });
   });
 });
