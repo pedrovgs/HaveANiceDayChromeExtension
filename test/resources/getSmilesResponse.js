@@ -8,12 +8,15 @@ export const getSmilesResponse = {
     },
     {
       id: 2,
-      title: "Title",
-      message: "Message",
-      photoUrl: "http://photos.com/random1.png"
+      title: "Title"
     }
   ],
   totalCount: 10,
   page: 1,
   pageSize: 25
+};
+
+export const getRandomSmileResponse = {
+  id: 2,
+  title: "Title"
 };

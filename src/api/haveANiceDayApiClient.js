@@ -23,8 +23,8 @@ export class HaveANiceDayApiClient {
   getRandomSmile() {
     let requestPath = `${basePath}/smile`;
     return client(requestPath).then(
-      response => toSmile(JSON.parse(response.entity)),
-      error => toSmilesError(error)
+      response => Either.Right(toSmile(JSON.parse(response.entity))),
+      error => Either.Left(toSmilesError(error))
     );
   }
 }
@@ -45,7 +45,10 @@ function toSmile(jsonSmile) {
 }
 
 function toSmilesError(response) {
-  if (response.status.code) {
+  const errorStatusCode = response.status.code;
+  if (errorStatusCode === 404) {
+    return GetSmileError.SmileNotFound;
+  } else if (errorStatusCode) {
     return GetSmileError.UnknownError;
   } else {
     return GetSmileError.NetworkError;

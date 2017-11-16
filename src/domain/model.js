@@ -1,7 +1,7 @@
 import { Enum } from "enumify";
 
 export class GetSmileError extends Enum {}
-GetSmileError.initEnum(["NetworkError", "UnknownError"]);
+GetSmileError.initEnum(["NetworkError", "UnknownError", "SmileNotFound"]);
 
 export class Page {
   constructor(number = 1, pageSize = 5) {
