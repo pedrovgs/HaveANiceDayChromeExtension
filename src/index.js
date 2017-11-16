@@ -6,9 +6,11 @@ import { Page, getSmiles } from "./api/haveANiceDayApiClient";
 
 window.onload = () => {
   const carousel = $(".slick-slider");
-  initializeCarousel(carousel).then(() => {
-    const smiles = [1, 2, 3, 4, 5, 6, 7];
-    setTimeout(showSmiles(carousel, smiles), 1000);
+  const carouselPromise = initializeCarousel(carousel);
+  const smilesPromise = loadSmiles();
+  Promise.all([carouselPromise, smilesPromise]).then(results => {
+    const smiles = results[1]; //TODO: Model this better
+    showSmiles(carousel, smiles);
   });
 };
 
@@ -19,10 +21,15 @@ function initializeCarousel(carousel) {
     });
     carousel.slick({
       autoplay: true,
-      autoplaySpeed: 1 * Duration.hour,
+      autoplaySpeed: 1 * Duration.minute,
       arrows: false
     });
   });
+}
+
+function loadSmiles() {
+  const page = new Page(1, 10);
+  return getSmiles(page);
 }
 
 function showSmiles(carousel, smiles) {

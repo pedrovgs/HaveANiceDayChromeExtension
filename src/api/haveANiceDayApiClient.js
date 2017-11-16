@@ -14,5 +14,6 @@ export class Page {
 export function getSmiles(page) {
   const pageNumber = page.number;
   const pageSize = page.pageSize;
-  return rest(`${basePath}/smiles?page=${pageNumber}&pageSize=${pageSize}`);
+  //return rest(`${basePath}/smiles?page=${pageNumber}&pageSize=${pageSize}`);
+  return Promise.resolve([1, 2, 3, 4]);
 }
