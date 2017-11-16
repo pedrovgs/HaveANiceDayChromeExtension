@@ -1,7 +1,8 @@
 import { HaveANiceDayApiClient } from "../../src/api/haveANiceDayApiClient";
 import { GetSmileError, Page, Smile } from "../../src/domain/model";
 import {
-  getRandomSmileResponse, getSmilesEmptyPageResponse,
+  getRandomSmileResponse,
+  getSmilesEmptyPageResponse,
   getSmilesResponse
 } from "../resources/getSmilesResponse";
 import { Maybe } from "monet";
