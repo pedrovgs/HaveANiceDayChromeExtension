@@ -5,17 +5,34 @@ import { GetSmiles } from "./domain/useCases";
 
 const getSmiles = new GetSmiles();
 
+function showPlaceholder(carousel, placeholder) {
+  hide(carousel);
+  resetCarousel(carousel);
+  show(placeholder);
+}
+
+function showSmilesSlider(carousel, placeholder, getSmilesResult) {
+  hide(placeholder);
+  show(carousel);
+  showSmiles(carousel, getSmilesResult.right());
+}
+
 window.onload = () => {
   const carousel = $(".slick-slider");
+  const placeholder = $(".placeholder");
   const carouselPromise = initializeCarousel(carousel);
   const smilesPromise = loadSmiles();
   Promise.all([carouselPromise, smilesPromise]).then(results => {
     const getSmilesResult = results[1];
     if (getSmilesResult.isRight()) {
-      showSmiles(carousel, getSmilesResult.right());
+      const smiles = getSmilesResult.right();
+      if (smiles.length > 0) {
+        showSmilesSlider(carousel, placeholder, getSmilesResult);
+      } else {
+        showPlaceholder(carousel, placeholder);
+      }
     } else {
-      resetCarousel(carousel);
-      showErrorCase();
+      showPlaceholder(carousel, placeholder);
     }
   });
 };
@@ -60,6 +77,10 @@ function showSmile(carousel, smile) {
   );
 }
 
-function showErrorCase() {
-  //TODO: Implement this method with the corresponding UI.
+function show(element) {
+  element.fadeIn();
+}
+
+function hide(element) {
+  element.fadeOut();
 }
