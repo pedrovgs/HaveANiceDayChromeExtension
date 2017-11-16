@@ -14,6 +14,7 @@ window.onload = () => {
     if (getSmilesResult.isRight()) {
       showSmiles(carousel, getSmilesResult.right());
     } else {
+      resetCarousel(carousel);
       showErrorCase();
     }
   });
@@ -44,8 +45,9 @@ function showSmiles(carousel, smiles) {
 }
 
 function resetCarousel(carousel) {
-  //TODO: Improve this
-  carousel.slick("slickRemove", 0);
+  while (document.querySelectorAll(".slick-slide").length > 0) {
+    carousel.slick("slickRemove", 0);
+  }
 }
 
 function showSmile(carousel, smile) {
