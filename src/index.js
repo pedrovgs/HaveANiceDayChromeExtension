@@ -1,16 +1,18 @@
 import "slick-carousel";
 import $ from "jquery";
 import Duration from "duration-js";
+import { GetSmiles } from "./domain/useCases";
 
-import { Page, getSmiles } from "./api/haveANiceDayApiClient";
+const getSmiles = new GetSmiles();
 
 window.onload = () => {
   const carousel = $(".slick-slider");
   const carouselPromise = initializeCarousel(carousel);
   const smilesPromise = loadSmiles();
   Promise.all([carouselPromise, smilesPromise]).then(results => {
-    const smiles = results[1]; //TODO: Model this better
-    showSmiles(carousel, smiles);
+    //TODO: Check left or right here bro.
+    const getSmilesResult = results[1];
+    showSmiles(carousel, getSmilesResult);
   });
 };
 
@@ -28,8 +30,7 @@ function initializeCarousel(carousel) {
 }
 
 function loadSmiles() {
-  const page = new Page(1, 10);
-  return getSmiles(page);
+  return getSmiles.execute();
 }
 
 function showSmiles(carousel, smiles) {

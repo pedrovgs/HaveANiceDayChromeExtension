@@ -24,6 +24,7 @@
     "jsverify": "^0.8.3",
     "mocha": "^4.0.1",
     "mocha-eslint": "^4.1.0",
+    "nock": "^9.1.0",
     "prettier": "^1.8.2",
     "prettier-eslint-cli": "^4.4.0",
     "webpack": "^3.8.1",
@@ -31,7 +32,9 @@
   },
   "dependencies": {
     "duration-js": "^4.0.0",
+    "enumify": "^1.0.4",
     "jquery": "^3.2.1",
+    "monet": "^0.8.10",
     "rest": "^2.0.0",
     "slick-carousel": "^1.8.1"
   }

@@ -27,7 +27,8 @@
     "globals": { 
       "assert": true,
       "expect": true,
-      "jsc": true 
+      "jsc": true,
+      "nock": true
     }
  
   }
