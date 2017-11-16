@@ -26,6 +26,7 @@ function initializeCarousel(carousel) {
       resolve();
     });
     carousel.slick({
+      infinite: true,
       autoplay: true,
       autoplaySpeed: 1 * Duration.minute,
       arrows: false
