@@ -13,7 +13,14 @@
     }
 
     body {
-        background-color: #eeeeee;
+        background-color: #eee;
+    }
+
+    .placeholder {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -282px;
     }
 
     .slick-slider {
@@ -31,13 +38,25 @@
 
     .smile {
         height: 100%;
+        position: relative;
     }
 
-    .placeholder {
-        height: 100%;
+    .smile img {
+        height: 75%;
+        margin: 0;
         position: absolute;
+        top: 50%;
         left: 50%;
-        margin-left: -282px;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+        padding: 1%;
+        border:solid 1vw;
+        border-top-color: #242424;
+        border-right-color: black;
+        border-left-color: black;
+        border-bottom-color: #242424;
+        background-image: linear-gradient(to left, #dadada, #eee, #dadada);
     }
 </style>
 <img class="placeholder" src="placeholder.png" alt="Have a nice day placeholder">

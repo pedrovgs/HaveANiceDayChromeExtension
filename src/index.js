@@ -69,11 +69,13 @@ function resetCarousel(carousel) {
 }
 
 function showSmile(carousel, smile) {
-  const title = smile.toString();
-  const photo = "https://nerdist.com/wp-content/uploads/2017/03/PnM2iU.jpg";
+  const alternativeText = smile.message.orSome(smile.title);
+  const photo = smile.photo.orSome("placeholder.png");
   carousel.slick(
     "slickAdd",
-    `<img class='smile' src='${photo}' alt='${title}'/>`
+    `<div class='smile'>
+        <img src='${photo}' alt='${alternativeText}'/>
+    </div>`
   );
 }
 
