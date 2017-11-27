@@ -1,6 +1,9 @@
 cache:
   yarn: true
 
+addons:
+  chrome: stable
+
 before_install:
   - yarn --version
 
@@ -10,3 +13,4 @@ script:
   - yarn eslint test
   - yarn test
   - yarn webpack
+  - yarn backstop test

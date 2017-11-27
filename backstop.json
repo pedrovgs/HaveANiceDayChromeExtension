@@ -10,8 +10,9 @@
   "scenarios": [
     {
       "label": "Index",
-      "url": "http://localhost:8080/index.html",
-      "readySelector": ".smile"
+      "url": "./dist/index.html",
+      "readySelector": ".smile",
+      "delay": 1000
     }
   ],
   "paths": {
@@ -21,11 +22,10 @@
     "html_report": "backstop_data/html_report",
     "ci_report": "backstop_data/ci_report"
   },
-  "report": ["browser"],
-  "engine": "phantomjs",
-  "engineFlags": [],
-  "asyncCaptureLimit": 5,
+  "report": ["browser", "CI"],
+  "engine": "chrome",
+  "asyncCaptureLimit": 1,
   "asyncCompareLimit": 50,
-  "debug": false,
-  "debugWindow": false
+  "debug": true,
+  "debugWindow": true
 }
