@@ -34,6 +34,17 @@ module.exports = [
           ]
         },
         {
+          test: /\.css/,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[name].[ext]"
+              }
+            }
+          ]
+        },
+        {
           test: /manifest\.json$/,
           use: [
             {

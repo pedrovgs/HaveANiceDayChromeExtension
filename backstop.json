@@ -7,14 +7,12 @@
       "height": 900
     }
   ],
-  "onBeforeScript": "casper/onBefore.js",
-  "onReadyScript": "casper/onReady.js",
   "scenarios": [
     {
       "label": "Index",
       "url": "./dist/index.html",
       "readySelector": ".smile",
-      "delay": 2000
+      "delay": 1000
     }
   ],
   "paths": {
@@ -25,7 +23,7 @@
     "ci_report": "backstop_data/ci_report"
   },
   "report": ["browser", "CI"],
-  "engine": "phantomjs",
+  "engine": "chrome",
   "asyncCaptureLimit": 1,
   "asyncCompareLimit": 50,
   "debug": true,
