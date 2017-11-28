@@ -14,7 +14,7 @@ body {
     width: auto;
     position: absolute;
     left: 50%;
-    margin-left: -282px;
+    margin-left: -webkit-calc(-282px);
 }
 
 .slick-slider {
@@ -42,18 +42,15 @@ body {
 .smile img {
     height: 75%;
     width: auto;
-    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
+    margin: 0 -webkit-calc(-50%) 0 0;
     transform: translate(-50%, -50%);
 
     padding: 1%;
-    border: solid 1vw;
-    border-top-color: #242424;
+    border: 1vw solid #242424;
     border-right-color: black;
     border-left-color: black;
-    border-bottom-color: #242424;
     background-image: linear-gradient(to left, #dadada, #eee, #dadada);
 }
