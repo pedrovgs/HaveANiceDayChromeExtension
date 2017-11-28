@@ -13,7 +13,6 @@ cache:
   yarn: true
 
 script:
-  - yarn upgrade
   - yarn install
   - yarn eslint src
   - yarn eslint test
