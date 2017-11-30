@@ -16,5 +16,5 @@ script:
   - yarn test
   - yarn webpack &
   - yarn http-server dist/ &
-  - sleep(30)
+  - sleep 30
   - yarn backstop test
