@@ -12,7 +12,7 @@
   "scenarios": [
     {
       "label": "Index",
-      "url": "http://localhost:8080/index.html",
+      "url": "./dist/index.html",
       "readySelector": ".smile",
       "delay": 2000
     }

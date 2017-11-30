@@ -14,7 +14,5 @@ script:
   - yarn eslint src
   - yarn eslint test
   - yarn test
-  - yarn webpack &
-  - yarn http-server dist/ &
-  - sleep 30
+  - yarn webpack
   - yarn backstop test
