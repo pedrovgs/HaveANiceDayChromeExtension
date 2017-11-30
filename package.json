@@ -28,7 +28,7 @@
     "mocha": "^4.0.1",
     "mocha-eslint": "^4.1.0",
     "nock": "^9.1.0",
-    "phantomjs": "^2.1.7",
+    "phantomjs": "^2.0.0",
     "prettier": "^1.8.2",
     "prettier-eslint-cli": "^4.4.0",
     "webpack": "^3.8.1",
