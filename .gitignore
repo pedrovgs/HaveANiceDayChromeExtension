@@ -77,3 +77,4 @@ undefined/
 screenshots/*.diff.png
 screenshots/*.fail.png
 failures/
+results.xml

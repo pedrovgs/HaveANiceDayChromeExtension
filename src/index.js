@@ -1,7 +1,7 @@
 import "slick-carousel";
 import $ from "jquery";
 import Duration from "duration-js";
-import { GetSmiles } from "./domain/useCases";
+import { GetSmiles } from "./domain/use-cases";
 import { onImageLoaded } from "./api/utils";
 
 const getSmiles = new GetSmiles();

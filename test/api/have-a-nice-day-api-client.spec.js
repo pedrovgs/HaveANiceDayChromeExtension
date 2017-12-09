@@ -1,4 +1,4 @@
-import { HaveANiceDayApiClient } from "../../src/api/haveANiceDayApiClient";
+import { HaveANiceDayApiClient } from "../../src/api/have-a-nice-day-api-client";
 import { GetSmileError, Page, Smile } from "../../src/domain/model";
 import {
   getRandomSmileResponse,

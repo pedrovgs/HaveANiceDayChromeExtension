@@ -1,4 +1,4 @@
-import { HaveANiceDayApiClient } from "../api/haveANiceDayApiClient";
+import { HaveANiceDayApiClient } from "../api/have-a-nice-day-api-client";
 import { Page } from "./model";
 
 let defaultPage = new Page(1, 10);
