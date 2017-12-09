@@ -4,7 +4,7 @@ import {
   getRandomSmileResponse,
   getSmilesEmptyPageResponse,
   getSmilesResponse
-} from "../resources/getSmilesResponse";
+} from "../resources/get-smiles-response";
 import { Maybe } from "monet";
 
 const apiClient = new HaveANiceDayApiClient();
