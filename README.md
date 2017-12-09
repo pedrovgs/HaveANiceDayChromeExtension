@@ -2,6 +2,10 @@
 
 Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveANiceDay](https://github.com/pedrovgs/HaveANiceDay)
 
+Replace your new tab page with some different and friendly messages changing everyday. We hope this extension will make you smile at least once a day :smiley:
+
+![screenshot](./art/screenshot.png)
+
 ### Executing tests:
 
 This project contains some tests written using [Mocha](https://mochajs.org/). You can easily run the tests by executing:
@@ -20,6 +24,20 @@ If you are using IntelliJ IDEA, WebStorm or any other IDE to run your tests you'
 
 This configuration is the same you can find in the project ``package.json`` configuration.
 
+### Executing visual regression tests:
+
+This project is configured to run some tests using a technique known as visual regression testing or screenshot testing. Using ``phantomxhr``, ``phantomjs``, ``casperjs``, and ``caspercss`` we are able to simulate server side responses and assert if the project UI shows the expected data to the user based on recorded screenshots. You can run these tests executing the following command:
+
+```
+yarn screenshot-test
+```
+
+These command will use the images found in the folder ``screenshots`` as baseline. If something changes in this command will break the build and you'll be able to review an image with the difference between the expected user interface and the new one.
+
+### Running the extension:
+
+To run this extension you can execute ``yarn webpack`` and import the extension as an "unpacked extension" or run ``yarn start`` and run the extension as a regular web page.
+
 ### Packaging:
 
 This project uses [webpack](https://webpack.js.org) and [babel](https://babeljs.io) in order to pack a simple ``bundle.js`` file, with all the repository code, fully backward compatible with some old JavaScript versions. If you want to pack all this code into a single file you can easily do it by just running:
@@ -27,6 +45,8 @@ This project uses [webpack](https://webpack.js.org) and [babel](https://babeljs.
 ```
 yarn webpack
 ```
+
+This command generates a ``dist`` folder where all the code needed to pack the extension is placed. After executing this command you can export the chrome extension using the chrome development tools.
 
 ### Linter:
 

@@ -4,3 +4,4 @@ global.jsc = require("jsverify");
 const mocha = require("mocha");
 global.describe = mocha.describe;
 global.it = mocha.it;
+global.nock = require("nock");

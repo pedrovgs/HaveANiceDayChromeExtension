@@ -1,0 +1,9 @@
+require("babel-polyfill");
+require("./manifest.json");
+require("./index.html");
+require("./index.css");
+require("./index.js");
+require("../resources/placeholder.png");
+require("../resources/icon16.png");
+require("../resources/icon48.png");
+require("../resources/icon128.png");
