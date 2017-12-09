@@ -15,10 +15,20 @@ yarn test -g "String calculator spec*" //Executes tests matching with the regex 
 If you are using IntelliJ IDEA, WebStorm or any other IDE to run your tests you'll need to configure the mocha execution options adding the following configuration:
 
 ```
---recursive --require ./test/snap.js --require babel-register
+--recursive --require ./test/bootload.js --require babel-register
 ```
 
 This configuration is the same you can find in the project ``package.json`` configuration.
+
+### Executing visual regression tests:
+
+This project is configured to run some tests using a technique known as visual regression testing or screenshot testing. Using ``phantomxhr``, ``phantomjs``, ``casperjs``, and ``caspercss`` we are able to simulate server side responses and assert if the project UI shows the expected data to the user based on recorded screenshots. You can run these tests executing the following command:
+
+```
+yarn screenshot-test
+```
+
+These command will use the images found in the folder ``screenshots`` as baseline. If something changes in this command will break the build and you'll be able to review an image with the difference between the expected user interface and the new one.
 
 ### Running the extension:
 
