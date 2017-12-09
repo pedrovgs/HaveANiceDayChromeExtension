@@ -29,7 +29,6 @@
     "mocha": "^4.0.1",
     "mocha-eslint": "^4.1.0",
     "nock": "^9.1.0",
-    "phantomcss": "^1.4.0",
     "phantomjs": "^2.1.1",
     "phantomxhr": "^0.3.0",
     "prettier": "^1.8.2",

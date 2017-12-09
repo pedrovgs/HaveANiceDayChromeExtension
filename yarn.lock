@@ -3839,15 +3839,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-phantomcss@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/phantomcss/-/phantomcss-1.4.0.tgz#e46bd281d6bb932667029d6ea797128c271064a1"
-  dependencies:
-    casperjs "^1.1.4"
-    phantomjs-prebuilt "^2.1.16"
-    resemblejs "^2.5.0"
-
-phantomjs-prebuilt@^2.1.16, phantomjs-prebuilt@^2.1.7:
+phantomjs-prebuilt@^2.1.7:
   version "2.1.16"
   resolved "https://registry.yarnpkg.com/phantomjs-prebuilt/-/phantomjs-prebuilt-2.1.16.tgz#efd212a4a3966d3647684ea8ba788549be2aefef"
   dependencies:
@@ -4399,10 +4391,6 @@ require-uncached@^1.0.3:
 requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
-
-resemblejs@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/resemblejs/-/resemblejs-2.5.0.tgz#2a15bd918518bc037735392fbace25fb1eb5b9d7"
 
 reserved-words@^0.1.2:
   version "0.1.2"
