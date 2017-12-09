@@ -28,7 +28,9 @@
       "assert": true,
       "expect": true,
       "jsc": true,
-      "nock": true
+      "nock": true,
+      "casper": true,
+      "phantomcss": true
     }
  
   }
