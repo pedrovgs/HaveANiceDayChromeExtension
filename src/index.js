@@ -2,6 +2,7 @@ import "slick-carousel";
 import $ from "jquery";
 import Duration from "duration-js";
 import { GetSmiles } from "./domain/useCases";
+import { onImageLoaded } from "./api/utils";
 
 const getSmiles = new GetSmiles();
 
@@ -12,9 +13,17 @@ function showPlaceholder(carousel, placeholder) {
 }
 
 function showSmilesSlider(carousel, placeholder, getSmilesResult) {
-  hide(placeholder);
-  show(carousel);
-  showSmiles(carousel, getSmilesResult.right());
+  getSmilesResult.map(smiles => {
+    const smilesWithPhoto = smiles.filter(smile => smile.photo.isSome());
+    if (smilesWithPhoto.length) {
+      const firstSmile = smilesWithPhoto[0];
+      onImageLoaded(firstSmile.photo.orSome(""), () => {
+        show(carousel);
+        hide(placeholder);
+        showSmiles(carousel, smilesWithPhoto);
+      });
+    }
+  });
 }
 
 window.onload = () => {
@@ -46,6 +55,7 @@ function initializeCarousel(carousel) {
       infinite: true,
       autoplay: true,
       autoplaySpeed: 1 * Duration.minute,
+      lazyLoad: "ondemand",
       arrows: false
     });
   });
