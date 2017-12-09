@@ -18,4 +18,4 @@ script:
   - yarn eslint test
   - yarn test
   - yarn webpack
-  - yarn backstop test
+  - yarn screenshot-test

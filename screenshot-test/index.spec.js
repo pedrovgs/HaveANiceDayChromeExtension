@@ -1,5 +1,5 @@
 const xhr = require("phantomxhr");
-
+casper.options.viewportSize = { width: 1440, height: 900 };
 describe("Index", function() {
   before(function() {
     casper

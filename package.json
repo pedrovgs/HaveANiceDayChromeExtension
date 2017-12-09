@@ -10,7 +10,7 @@
   "scripts": {
     "start": "webpack && webpack-dev-server",
     "test": "mocha --recursive --require ./test/bootload.js --require babel-register",
-    "screenshot-test": "mocha-casperjs ./screenshot-test/*.js --viewport-width=1440 --viewport-height=900"
+    "screenshot-test": "casperjs test ./screenshot-test/*screenshot.test.js --verbose --log-level=debug --xunit=results.xml"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
@@ -29,6 +29,7 @@
     "mocha": "^4.0.1",
     "mocha-eslint": "^4.1.0",
     "nock": "^9.1.0",
+    "phantomcss": "^1.4.0",
     "phantomjs": "^2.1.1",
     "phantomxhr": "^0.3.0",
     "prettier": "^1.8.2",
@@ -41,7 +42,6 @@
     "duration-js": "^4.0.0",
     "enumify": "^1.0.4",
     "jquery": "^3.2.1",
-    "mocha-casperjs": "^0.6.0",
     "monet": "^0.8.10",
     "rest": "^2.0.0",
     "slick-carousel": "^1.8.1"

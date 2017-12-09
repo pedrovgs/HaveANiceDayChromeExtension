@@ -15,7 +15,7 @@ yarn test -g "String calculator spec*" //Executes tests matching with the regex 
 If you are using IntelliJ IDEA, WebStorm or any other IDE to run your tests you'll need to configure the mocha execution options adding the following configuration:
 
 ```
---recursive --require ./test/bootload.js --require babel-register
+--recursive --require ./test/snap.js --require babel-register
 ```
 
 This configuration is the same you can find in the project ``package.json`` configuration.

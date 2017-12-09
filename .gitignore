@@ -74,3 +74,6 @@ backstop_data/ci_report/
 # phantomcss
 
 undefined/
+screenshots/*.diff.png
+screenshots/*.fail.png
+failures/
