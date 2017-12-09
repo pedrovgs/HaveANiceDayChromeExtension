@@ -4,6 +4,8 @@ Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveA
 
 Replace your new tab page with some different and friendly messages changing everyday. We hope this extension will make you smile at least once a day :smiley:
 
+You can install the extension [here](https://chrome.google.com/webstore/detail/have-a-nice-day/comofccfnmfabkebjbofiahfpbcejaen)
+
 ![screenshot](./art/screenshot.png)
 
 ### Executing tests:
