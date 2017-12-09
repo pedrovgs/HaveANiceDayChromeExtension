@@ -2,6 +2,10 @@
 
 Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveANiceDay](https://github.com/pedrovgs/HaveANiceDay)
 
+Replace your new tab page with some different and friendly messages changing everyday. We hope this extension will make you smile at least once a day :smiley:
+
+![screenshot](./art/screenshot.png)
+
 ### Executing tests:
 
 This project contains some tests written using [Mocha](https://mochajs.org/). You can easily run the tests by executing:
