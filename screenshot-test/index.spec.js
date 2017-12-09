@@ -1,6 +1,6 @@
 const xhr = require("phantomxhr");
 
-describe("Google searching", function() {
+describe("Index", function() {
   before(function() {
     casper
       .on("page.initialized", function() {
@@ -32,16 +32,18 @@ describe("Google searching", function() {
       .start("./dist/index.html");
   });
 
-  it("should return the placeholder by default before loading the smiles", function(done) {
+  it("should return the placeholder by default before loading the smiles", function() {
     casper.then(function() {
-      casper.capture("screenshots/index_placeholder");
+      casper.capture("screenshots/index_placeholder.png");
     });
   });
 
-  it("should leave the placeholder as is if there are no smiles", function(done) {
-    casper.waitForSelector(".smile").wait(2000).then(function() {
-      casper.capture("screenshots/index_after_loading_just_one_smile");
-      done();
-    });
+  it("should leave the placeholder as is if there are no smiles", function() {
+    casper
+      .waitForSelector(".smile")
+      .wait(2000)
+      .then(function() {
+        casper.capture("screenshots/index_after_loading_just_one_smile.png");
+      });
   });
 });
