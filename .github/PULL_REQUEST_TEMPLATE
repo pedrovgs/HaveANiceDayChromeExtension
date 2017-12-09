@@ -18,10 +18,4 @@ _If it cannot be tested explain why._
 - [ ] **Use case 2:** _If the use case requires some complex steps, increase indentation_
   - [ ] _Step 1_
   - [ ] _Step 2_
-
-
-### Requires DB migration?
-
-- [ ] Nope, we can just merge this branch.
-- [ ] Yes, but we need to apply it before merging this branch.
-- [ ] Yes, it's already applied.
+  
