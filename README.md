@@ -1,10 +1,10 @@
 # Have a nice day - Chrome Extension [![Build Status](https://travis-ci.org/pedrovgs/HaveANiceDayChromeExtension.svg?branch=master)](https://travis-ci.org/pedrovgs/HaveANiceDayChromeExtension)
 
-Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveANiceDay](https://github.com/pedrovgs/HaveANiceDay)
+Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveANiceDay](https://github.com/pedrovgs/HaveANiceDay).
 
-Replace your new tab page with some different and friendly messages changing everyday. We hope this extension will make you smile at least once a day :smiley:
+Replace your new tab page with some different and friendly messages changing everyday. We hope this extension will make you smile at least once a day :smiley:.
 
-You can install the extension [here](https://chrome.google.com/webstore/detail/have-a-nice-day/comofccfnmfabkebjbofiahfpbcejaen)
+You can install the extension [here](https://chrome.google.com/webstore/detail/have-a-nice-day/comofccfnmfabkebjbofiahfpbcejaen).
 
 ![screenshot](./art/screenshot.png)
 
