@@ -1,4 +1,4 @@
-# Have a nice day - Chrome Extension [![Build Status](https://travis-ci.org/pedrovgs/HaveANiceDayChromeExtension.svg?branch=master)](https://travis-ci.org/pedrovgs/HaveANiceDayChromeExtension)
+# Have a nice day - Chrome Extension
 
 Chrome extension to generate smiles thanks to [https://github.com/pedrovgs/HaveANiceDay](https://github.com/pedrovgs/HaveANiceDay).
 
